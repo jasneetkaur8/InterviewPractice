@@ -39,7 +39,12 @@ public class EmployeeWithComparable implements Comparable{
 
 	public int compareTo(Object o) {
 		EmployeeWithComparable e1 = (EmployeeWithComparable)o;
-		return this.name.compareTo(e1.getName());
+		int result= this.name.compareTo(e1.getName());
+		if(result==0)
+			result = Integer.compare(this.getAge(), e1.getAge());
+		if(result==0)
+			result = Double.compare(this.getSalary(), e1.getSalary());
+		return result;
 	}
 
 	@Override
