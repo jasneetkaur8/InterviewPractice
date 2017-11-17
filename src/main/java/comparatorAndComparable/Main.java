@@ -62,8 +62,9 @@ public class Main {
 		
 		//sort directly on list with lambda expression
 		employeeList2.sort((EmployeeWithComparable e1, EmployeeWithComparable e2)->e1.getAge()-e2.getAge());
-		System.out.println("\nEmployeesWithComparable after sort on age directly with list");
-		printEmployees(employeeList2);
+		System.out.println("\nEmployeesWithComparable after sort on age directly with listusimh lambda expression for comparison as well as printing");
+		//printing with lambda
+		employeeList2.forEach(e->System.out.println(e));
 
 	}
 	
