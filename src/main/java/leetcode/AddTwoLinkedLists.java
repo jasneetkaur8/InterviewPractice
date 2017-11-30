@@ -98,3 +98,23 @@ class ListNode {
     return dummyHead.next;
 }
 */
+/*recursive solution
+*V
+vishmaram commented last week
+Below is another solution with recursive call:
+
+public static ListNode addTwoNumbers(ListNode l1, ListNode l2)
+{
+if(l1==null)return l2;
+else if(l2==null) return l1;
+else
+{
+int val = l1.val+l2.val>=10?l1.val+l2.val-10:l1.val+l2.val;
+ListNode result = new ListNode(val);
+result.next = addTwoNumbers(l1.next,l2.next);
+if(l1.val+l2.val>=10)
+result.next = addTwoNumbers(result.next,new ListNode(1));
+return result;
+}
+}
+*/
